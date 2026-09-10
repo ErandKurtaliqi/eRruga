@@ -1,104 +1,807 @@
-<section class="privacy-policy">
-  <h1>eRruga Privacy Policy</h1>
-  <p><strong>Updated:</strong> September 9, 2026</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <p>
-    Your privacy, explained clearly. Data is used for tickets, payments,
-    scans, and safe trip operations.
-  </p>
+  <title>eRruga - Privacy Policy</title>
+  <meta
+    name="description"
+    content="Privacy Policy for the eRruga application."
+  />
 
-  <h2>Privacy with a clear purpose</h2>
-  <p>
-    eRruga collects only the data needed for accounts, tickets, payments,
-    scans, and route operations. Every data point is tied to a specific
-    service in the app.
-  </p>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  <h2>Role-based access</h2>
-  <p>
-    Passengers, conductors, and companies do not see the same data.
-    Each role sees only the information needed for work or travel.
-  </p>
+    html {
+      scroll-behavior: smooth;
+    }
 
-  <h2>Payments and cards</h2>
-  <p>
-    Card data is verified through Paysera. The app stores only the information
-    needed to identify the payment method and payment history.
-  </p>
+    body {
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
 
-  <h2>Operational traceability</h2>
-  <p>
-    Purchase time, travel date, and scan time are kept for ticket validation,
-    misuse prevention, reports, and user support.
-  </p>
+      background: #f5f7fa;
+      color: #1f2937;
+      line-height: 1.7;
+    }
 
-  <h2>Privacy for passengers</h2>
-  <p>
-    This section explains how your profile, destination searches, tickets,
-    and payments are stored.
-  </p>
+    /* =========================
+       HERO
+    ========================== */
 
-  <h3>Profile data</h3>
-  <p>
-    First name, last name, email, phone, and account creation date are used
-    for identification, account access, and service communication.
-  </p>
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(
+          circle at top right,
+          rgba(255, 255, 255, 0.15),
+          transparent 35%
+        ),
+        linear-gradient(135deg, #0f766e, #0891b2);
 
-  <h3>Trip searches</h3>
-  <p>
-    Departure station, arrival station, and travel date are used to show direct
-    routes or alternatives when no direct route exists.
-  </p>
+      color: white;
+      padding: 80px 24px 110px;
+    }
 
-  <h3>Tickets</h3>
-  <p>
-    Ticket code, route, travel date, time, operator, price, and status are
-    stored so the ticket can be displayed and validated when boarding.
-  </p>
+    .hero-content {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
 
-  <h3>Payments</h3>
-  <p>
-    Payment status, amount, currency, method, and reference are kept for
-    purchase confirmation, history, and issue resolution.
-  </p>
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 35px;
 
-  <h2>How data is used</h2>
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
 
-  <h3>Accurate validation</h3>
-  <p>
-    The conductor can check whether a ticket is valid, which date it applies to,
-    and whether it has already been scanned.
-  </p>
+    .brand-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
 
-  <h3>Your history</h3>
-  <p>
-    In your account you can see active tickets, past tickets, and payment
-    methods you have registered.
-  </p>
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-  <h3>Service notifications</h3>
-  <p>
-    Data may be used for important notifications about your ticket, payment,
-    or service changes.
-  </p>
+      background: rgba(255, 255, 255, 0.17);
+      border: 1px solid rgba(255, 255, 255, 0.25);
 
-  <h2>Your control</h2>
-  <ul>
-    <li>You can update your profile data in your account.</li>
-    <li>You can delete or change your payment method when available.</li>
-    <li>You can request clarification about the data stored for your tickets and payments.</li>
-  </ul>
+      font-size: 20px;
+    }
 
-  <h2>How long is it kept?</h2>
-  <p>
-    Data is kept as long as needed to operate the service, verify tickets,
-    prepare financial reports, provide security and support, and meet legal
-    obligations. When it is no longer needed, it should be deleted or anonymized
-    according to system rules.
-  </p>
+    .hero h1 {
+      font-size: clamp(36px, 5vw, 58px);
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+      max-width: 700px;
+      margin-bottom: 18px;
+    }
 
-  <h2>Privacy questions?</h2>
-  <p>
-    Contact the eRruga team for access, updates, or clarification about your data.
-  </p>
-</section>
+    .hero-description {
+      max-width: 650px;
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.88);
+      margin-bottom: 26px;
+    }
+
+    .updated {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      padding: 8px 14px;
+      border-radius: 30px;
+
+      background: rgba(255, 255, 255, 0.13);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.95);
+    }
+
+    /* =========================
+       MAIN LAYOUT
+    ========================== */
+
+    .page-wrapper {
+      max-width: 1100px;
+      margin: -60px auto 70px;
+      padding: 0 24px;
+
+      position: relative;
+      z-index: 2;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 250px minmax(0, 1fr);
+      gap: 28px;
+      align-items: start;
+    }
+
+    /* =========================
+       SIDE NAVIGATION
+    ========================== */
+
+    .side-nav {
+      position: sticky;
+      top: 24px;
+
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 20px;
+
+      padding: 22px;
+
+      box-shadow:
+        0 10px 30px rgba(15, 23, 42, 0.04),
+        0 2px 8px rgba(15, 23, 42, 0.03);
+    }
+
+    .side-nav h3 {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #94a3b8;
+      margin-bottom: 15px;
+    }
+
+    .side-nav a {
+      display: block;
+
+      text-decoration: none;
+      color: #475569;
+
+      font-size: 14px;
+      font-weight: 500;
+
+      padding: 9px 12px;
+      margin-bottom: 3px;
+
+      border-radius: 9px;
+
+      transition: all 0.2s ease;
+    }
+
+    .side-nav a:hover {
+      background: #ecfeff;
+      color: #0f766e;
+      transform: translateX(3px);
+    }
+
+    /* =========================
+       POLICY CONTENT
+    ========================== */
+
+    .privacy-policy {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .policy-card {
+      background: #ffffff;
+
+      border: 1px solid #e8edf2;
+      border-radius: 20px;
+
+      padding: 32px;
+
+      box-shadow:
+        0 10px 30px rgba(15, 23, 42, 0.035),
+        0 2px 8px rgba(15, 23, 42, 0.02);
+
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .policy-card:hover {
+      transform: translateY(-2px);
+
+      box-shadow:
+        0 16px 38px rgba(15, 23, 42, 0.06),
+        0 3px 10px rgba(15, 23, 42, 0.03);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+
+      margin-bottom: 16px;
+    }
+
+    .section-icon {
+      flex-shrink: 0;
+
+      width: 44px;
+      height: 44px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 13px;
+
+      background: linear-gradient(135deg, #ccfbf1, #cffafe);
+      color: #0f766e;
+
+      font-size: 21px;
+    }
+
+    h2 {
+      font-size: 22px;
+      line-height: 1.3;
+      color: #111827;
+      letter-spacing: -0.3px;
+    }
+
+    h3 {
+      font-size: 17px;
+      color: #1f2937;
+      margin-top: 22px;
+      margin-bottom: 7px;
+    }
+
+    p {
+      color: #64748b;
+      font-size: 15.5px;
+    }
+
+    .policy-card p + p {
+      margin-top: 12px;
+    }
+
+    ul {
+      margin-top: 12px;
+      list-style: none;
+    }
+
+    ul li {
+      position: relative;
+
+      padding: 9px 0 9px 30px;
+
+      color: #64748b;
+      font-size: 15.5px;
+
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    ul li:last-child {
+      border-bottom: none;
+    }
+
+    ul li::before {
+      content: "✓";
+
+      position: absolute;
+      left: 0;
+      top: 9px;
+
+      width: 20px;
+      height: 20px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: #ccfbf1;
+      color: #0f766e;
+
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    /* =========================
+       NOTICE BOX
+    ========================== */
+
+    .privacy-highlight {
+      background:
+        linear-gradient(
+          135deg,
+          rgba(13, 148, 136, 0.07),
+          rgba(8, 145, 178, 0.07)
+        );
+
+      border: 1px solid #bae6e8;
+    }
+
+    .highlight-label {
+      display: inline-block;
+
+      background: #ccfbf1;
+      color: #0f766e;
+
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+
+      padding: 5px 10px;
+      border-radius: 20px;
+
+      margin-bottom: 15px;
+    }
+
+    /* =========================
+       CONTACT
+    ========================== */
+
+    .contact-card {
+      background: linear-gradient(135deg, #0f766e, #0891b2);
+      color: white;
+      border: none;
+    }
+
+    .contact-card h2 {
+      color: white;
+    }
+
+    .contact-card p {
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .contact-card .section-icon {
+      background: rgba(255, 255, 255, 0.16);
+      color: white;
+    }
+
+    .contact-email {
+      display: inline-block;
+
+      margin-top: 20px;
+
+      color: white;
+      text-decoration: none;
+
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+
+      border-radius: 10px;
+
+      padding: 10px 16px;
+
+      font-weight: 600;
+      font-size: 14px;
+
+      transition: 0.2s ease;
+    }
+
+    .contact-email:hover {
+      background: rgba(255, 255, 255, 0.22);
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      border-top: 1px solid #e5e7eb;
+
+      padding: 30px 20px;
+
+      text-align: center;
+
+      color: #94a3b8;
+      font-size: 13px;
+    }
+
+    footer strong {
+      color: #64748b;
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 850px) {
+      .hero {
+        padding: 55px 20px 90px;
+      }
+
+      .page-wrapper {
+        margin-top: -45px;
+        padding: 0 15px;
+      }
+
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .side-nav {
+        display: none;
+      }
+
+      .policy-card {
+        padding: 24px 20px;
+        border-radius: 16px;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero-description {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header class="hero">
+
+    <div class="hero-content">
+
+      <div class="brand">
+        <div class="brand-icon">🚌</div>
+        <span>eRruga</span>
+      </div>
+
+      <h1>Privacy Policy</h1>
+
+      <p class="hero-description">
+        Your privacy matters to us. This policy explains what information
+        eRruga uses, why we use it, and how we protect it while providing
+        ticketing and transportation services.
+      </p>
+
+      <div class="updated">
+        Last updated: September 9, 2026
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       CONTENT
+  ========================== -->
+
+  <main class="page-wrapper">
+
+    <div class="layout">
+
+      <!-- SIDE NAV -->
+
+      <aside class="side-nav">
+
+        <h3>Contents</h3>
+
+        <a href="#purpose">Privacy purpose</a>
+        <a href="#access">Role-based access</a>
+        <a href="#payments">Payments</a>
+        <a href="#traceability">Ticket records</a>
+        <a href="#passengers">Passenger data</a>
+        <a href="#usage">How data is used</a>
+        <a href="#control">Your control</a>
+        <a href="#retention">Data retention</a>
+        <a href="#contact">Contact</a>
+
+      </aside>
+
+
+      <!-- PRIVACY POLICY -->
+
+      <section class="privacy-policy">
+
+
+        <!-- INTRO -->
+
+        <article class="policy-card privacy-highlight">
+
+          <span class="highlight-label">Our commitment</span>
+
+          <div class="section-header">
+
+            <div class="section-icon">🔒</div>
+
+            <h2>Privacy with a clear purpose</h2>
+
+          </div>
+
+          <p>
+            eRruga collects only the data needed for accounts, tickets,
+            payments, scans, and route operations. Every data point is tied
+            to a specific service provided through the application.
+          </p>
+
+        </article>
+
+
+        <!-- ROLE ACCESS -->
+
+        <article class="policy-card" id="access">
+
+          <div class="section-header">
+
+            <div class="section-icon">👤</div>
+
+            <h2>Role-based access</h2>
+
+          </div>
+
+          <p>
+            Passengers, conductors, and companies do not see the same data.
+            Each role has access only to the information required for its
+            respective travel or operational responsibilities.
+          </p>
+
+        </article>
+
+
+        <!-- PAYMENTS -->
+
+        <article class="policy-card" id="payments">
+
+          <div class="section-header">
+
+            <div class="section-icon">💳</div>
+
+            <h2>Payments and cards</h2>
+
+          </div>
+
+          <p>
+            Card data is verified through Paysera. The application stores
+            only the information required to identify the payment method
+            and maintain relevant payment history.
+          </p>
+
+        </article>
+
+
+        <!-- TRACEABILITY -->
+
+        <article class="policy-card" id="traceability">
+
+          <div class="section-header">
+
+            <div class="section-icon">🎫</div>
+
+            <h2>Operational traceability</h2>
+
+          </div>
+
+          <p>
+            Purchase time, travel date, and ticket scan time may be retained
+            for ticket validation, prevention of misuse, reporting, security,
+            and customer support.
+          </p>
+
+        </article>
+
+
+        <!-- PASSENGER DATA -->
+
+        <article class="policy-card" id="passengers">
+
+          <div class="section-header">
+
+            <div class="section-icon">🛡️</div>
+
+            <h2>Privacy for passengers</h2>
+
+          </div>
+
+          <p>
+            The following information may be processed when you use eRruga.
+          </p>
+
+
+          <h3>Profile data</h3>
+
+          <p>
+            First name, last name, email address, phone number, and account
+            creation date are used for identification, account access,
+            customer support, and service communication.
+          </p>
+
+
+          <h3>Trip searches</h3>
+
+          <p>
+            Departure station, arrival station, and travel date are processed
+            to display available routes and alternatives when a direct route
+            is not available.
+          </p>
+
+
+          <h3>Tickets</h3>
+
+          <p>
+            Ticket code, route, travel date, departure time, operator,
+            price, and ticket status are stored so that purchased tickets
+            can be displayed and validated when boarding.
+          </p>
+
+
+          <h3>Payments</h3>
+
+          <p>
+            Payment status, amount, currency, payment method, and transaction
+            reference may be retained for purchase confirmation, transaction
+            history, accounting, and issue resolution.
+          </p>
+
+        </article>
+
+
+        <!-- USAGE -->
+
+        <article class="policy-card" id="usage">
+
+          <div class="section-header">
+
+            <div class="section-icon">⚙️</div>
+
+            <h2>How your data is used</h2>
+
+          </div>
+
+
+          <h3>Accurate ticket validation</h3>
+
+          <p>
+            Authorized conductors can verify whether a ticket is valid,
+            determine the applicable travel date, and check whether the
+            ticket has already been scanned.
+          </p>
+
+
+          <h3>Your ticket history</h3>
+
+          <p>
+            Your account may display active tickets, previous tickets,
+            transaction information, and payment methods you have registered.
+          </p>
+
+
+          <h3>Service notifications</h3>
+
+          <p>
+            Relevant information may be used to send important notifications
+            concerning tickets, payments, routes, or changes affecting the
+            service you are using.
+          </p>
+
+        </article>
+
+
+        <!-- USER CONTROL -->
+
+        <article class="policy-card" id="control">
+
+          <div class="section-header">
+
+            <div class="section-icon">✓</div>
+
+            <h2>Your control</h2>
+
+          </div>
+
+          <ul>
+
+            <li>
+              You can update available profile information through your account.
+            </li>
+
+            <li>
+              You can remove or change your payment method when this option
+              is available.
+            </li>
+
+            <li>
+              You can request clarification regarding personal information
+              stored in relation to your tickets and payments.
+            </li>
+
+          </ul>
+
+        </article>
+
+
+        <!-- RETENTION -->
+
+        <article class="policy-card" id="retention">
+
+          <div class="section-header">
+
+            <div class="section-icon">🕒</div>
+
+            <h2>How long is data kept?</h2>
+
+          </div>
+
+          <p>
+            Data is retained for as long as necessary to operate the service,
+            validate tickets, maintain financial records, provide security
+            and support, resolve disputes, and comply with applicable legal
+            obligations.
+          </p>
+
+          <p>
+            When information is no longer required for these purposes,
+            it may be deleted or anonymized in accordance with applicable
+            requirements and system policies.
+          </p>
+
+        </article>
+
+
+        <!-- CONTACT -->
+
+        <article class="policy-card contact-card" id="contact">
+
+          <div class="section-header">
+
+            <div class="section-icon">✉️</div>
+
+            <h2>Privacy questions?</h2>
+
+          </div>
+
+          <p>
+            Contact the eRruga team if you have questions regarding this
+            Privacy Policy, your personal information, access requests,
+            updates, or other privacy-related matters.
+          </p>
+
+          <a
+            class="contact-email"
+            href="mailto:privacy@erruga.com"
+          >
+            Contact eRruga
+          </a>
+
+        </article>
+
+      </section>
+
+    </div>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    © 2026 <strong>eRruga</strong>.
+    All rights reserved.
+
+  </footer>
+
+</body>
+</html>
